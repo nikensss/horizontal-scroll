@@ -11,6 +11,7 @@
   width: 100vw;
   top: 0;
   left: 0;
+  z-index: 9999;
 }
 .nav .back {
   margin-left: 1.4rem;
@@ -33,16 +34,20 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  padding: 0 0.2rem;
+  perspective: 600px;
 }
 .projects .project {
   position: relative;
-  width: 300px;
+  width: 375px;
   height: 70vh;
   margin-right: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transform-style: preserve-3d;
+  transition: all 0.2s ease-in-out;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,6 +69,9 @@
   font-size: 3rem;
   font-weight: 1000;
 }
+.projects .project:hover {
+  cursor: pointer;
+}
 .projects .project:hover::before {
   position: absolute;
   width: 100%;
@@ -72,39 +80,30 @@
   transition: all 0.2s linear;
   background-color: rgba(151, 151, 151, 0.6);
 }
-.projects .project:hover .title, .projects .project:hover .plus {
+.projects .project:hover .title {
   opacity: 1;
 }
 .projects .project1 {
-  background-image: url("https://images.pexels.com/photos/7451876/pexels-photo-7451876.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7451876.jpg&fm=jpg");
+  background: linear-gradient(to bottom right, cornflowerblue, cadetblue 60%);
 }
 .projects .project2 {
-  background-image: url("https://images.pexels.com/photos/7396650/pexels-photo-7396650.jpeg?cs=srgb&dl=pexels-monica-turlui-7396650.jpg&fm=jpg");
+  background: linear-gradient(to bottom, olivedrab, darkolivegreen);
 }
 .projects .project3 {
-  background-image: url("https://images.pexels.com/photos/7457830/pexels-photo-7457830.jpeg?cs=srgb&dl=pexels-mathilde-langevin-7457830.jpg&fm=jpg");
+  background: linear-gradient(to bottom left, salmon, maroon 60%);
 }
 .projects .project4 {
-  background-image: url("https://images.pexels.com/photos/7400269/pexels-photo-7400269.jpeg?cs=srgb&dl=pexels-andrew-neel-7400269.jpg&fm=jpg");
-}
-.projects .project4 {
-  background-image: url("https://images.pexels.com/photos/7362648/pexels-photo-7362648.jpeg?cs=srgb&dl=pexels-alejandro-peralta-7362648.jpg&fm=jpg");
+  background: linear-gradient(to left, teal, aqua);
 }
 .projects .project5 {
-  background-image: url("https://images.pexels.com/photos/860909/pexels-photo-860909.jpeg?cs=srgb&dl=pexels-oleg-magni-860909.jpg&fm=jpg");
+  background: linear-gradient(to top left, darkslateblue, mediumorchid);
 }
 .projects .project6 {
-  background-image: url("https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?cs=srgb&dl=pexels-pok-rie-132037.jpg&fm=jpg");
+  background: linear-gradient(to top, coral, burlywood);
 }
 .projects .project7 {
-  background-image: url("https://images.pexels.com/photos/1476880/pexels-photo-1476880.jpeg?cs=srgb&dl=pexels-nextvoyage-1476880.jpg&fm=jpg");
+  background: linear-gradient(to top right, darkturquoise, darkviolet);
 }
 .projects .project8 {
-  background-image: url("https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?cs=srgb&dl=pexels-martin-damboldt-814499.jpg&fm=jpg");
-}
-.projects .project9 {
-  background-image: url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg");
-}
-.projects .project10 {
-  background-image: url("https://images.pexels.com/photos/2082949/pexels-photo-2082949.jpeg?cs=srgb&dl=pexels-alexandr-podvalny-2082949.jpg&fm=jpg");
+  background: linear-gradient(to right, plum, royalblue);
 }
