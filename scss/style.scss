@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+
+  .back {
+    margin-left: 1.4rem;
+    transition: all 0.2s linear;
+
+    &:hover {
+      transform: translateX(-12px);
+      cursor: pointer;
+    }
+
+    &::before {
+      content: '\226A';
+      font-size: 4rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.projects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .project {
+    position: relative;
+    width: 300px;
+    height: 70vh;
+    margin-right: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title {
+      position: relative;
+      opacity: 0;
+      font-variant: small-caps;
+      font-size: 2rem;
+      font-weight: 600;
+      transition: all 0.2s linear;
+
+      &::before {
+        content: '+';
+        position: absolute;
+        top: -8rem;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 1000;
+      }
+    }
+
+    &:hover {
+      &::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        transition: all 0.2s linear;
+        background-color: rgba(151, 151, 151, 0.6);
+      }
+
+      & .title,
+      & .plus {
+        opacity: 1;
+      }
+    }
+  }
+
+  .project1 {
+    background-image: url('https://images.pexels.com/photos/7451876/pexels-photo-7451876.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7451876.jpg&fm=jpg');
+  }
+  .project2 {
+    background-image: url('https://images.pexels.com/photos/7396650/pexels-photo-7396650.jpeg?cs=srgb&dl=pexels-monica-turlui-7396650.jpg&fm=jpg');
+  }
+  .project3 {
+    background-image: url('https://images.pexels.com/photos/7457830/pexels-photo-7457830.jpeg?cs=srgb&dl=pexels-mathilde-langevin-7457830.jpg&fm=jpg');
+  }
+  .project4 {
+    background-image: url('https://images.pexels.com/photos/7400269/pexels-photo-7400269.jpeg?cs=srgb&dl=pexels-andrew-neel-7400269.jpg&fm=jpg');
+  }
+  .project4 {
+    background-image: url('https://images.pexels.com/photos/7362648/pexels-photo-7362648.jpeg?cs=srgb&dl=pexels-alejandro-peralta-7362648.jpg&fm=jpg');
+  }
+  .project5 {
+    background-image: url('https://images.pexels.com/photos/860909/pexels-photo-860909.jpeg?cs=srgb&dl=pexels-oleg-magni-860909.jpg&fm=jpg');
+  }
+  .project6 {
+    background-image: url('https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?cs=srgb&dl=pexels-pok-rie-132037.jpg&fm=jpg');
+  }
+  .project7 {
+    background-image: url('https://images.pexels.com/photos/1476880/pexels-photo-1476880.jpeg?cs=srgb&dl=pexels-nextvoyage-1476880.jpg&fm=jpg');
+  }
+  .project8 {
+    background-image: url('https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?cs=srgb&dl=pexels-martin-damboldt-814499.jpg&fm=jpg');
+  }
+  .project9 {
+    background-image: url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg');
+  }
+  .project10 {
+    background-image: url('https://images.pexels.com/photos/2082949/pexels-photo-2082949.jpeg?cs=srgb&dl=pexels-alexandr-podvalny-2082949.jpg&fm=jpg');
+  }
+}
