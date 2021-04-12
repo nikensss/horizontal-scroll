@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +7,7 @@
 
 .nav {
   position: fixed;
+  display: flex;
   width: 100vw;
   top: 0;
   left: 0;
@@ -15,16 +15,26 @@
 }
 .nav .back {
   margin-left: 1.4rem;
-  transition: all 0.2s linear;
 }
 .nav .back:hover {
-  transform: translateX(-12px);
   cursor: pointer;
 }
-.nav .back::before {
-  content: "≪";
+.nav .back:hover::before {
+  transform: translateX(6px);
+}
+.nav .back:hover::after {
+  transform: translateX(-8px);
+}
+.nav .back::before, .nav .back::after {
+  content: "<";
+  display: inline-block;
   font-size: 4rem;
   font-weight: bold;
+  transition: all 0.2s linear;
+}
+.nav .back::before {
+  transform: translateX(15px);
+  transition-delay: 0.1s;
 }
 
 .projects {
@@ -45,8 +55,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  transform-style: preserve-3d;
   transition: all 0.2s ease-in-out;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,11 +71,11 @@
 .projects .project .title::before {
   content: "+";
   position: absolute;
-  top: -8rem;
+  top: -2.82rem;
   width: 100%;
   text-align: center;
   font-size: 3rem;
-  font-weight: 1000;
+  font-weight: 845;
 }
 .projects .project:hover {
   cursor: pointer;

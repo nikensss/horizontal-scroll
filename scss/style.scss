@@ -8,6 +8,7 @@
 
 .nav {
   position: fixed;
+  display: flex;
   width: 100vw;
   top: 0;
   left: 0;
@@ -15,17 +16,29 @@
 
   .back {
     margin-left: 1.4rem;
-    transition: all 0.2s linear;
 
     &:hover {
-      transform: translateX(-12px);
       cursor: pointer;
+      &::before {
+        transform: translateX(6px);
+      }
+      &::after {
+        transform: translateX(-8px);
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '<';
+      display: inline-block;
+      font-size: 4rem;
+      font-weight: bold;
+      transition: all 0.2s linear;
     }
 
     &::before {
-      content: '\226A';
-      font-size: 4rem;
-      font-weight: bold;
+      transform: translateX(15px);
+      transition-delay: 0.1s;
     }
   }
 }
@@ -48,8 +61,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    transform-style: preserve-3d;
     transition: all 0.2s ease-in-out;
 
     // background
@@ -68,11 +79,11 @@
       &::before {
         content: '+';
         position: absolute;
-        top: -8rem;
+        top: -2.82rem;
         width: 100%;
         text-align: center;
         font-size: 3rem;
-        font-weight: 1000;
+        font-weight: 845;
       }
     }
 
@@ -97,24 +108,31 @@
   .project1 {
     background: linear-gradient(to bottom right, cornflowerblue, cadetblue 60%);
   }
+
   .project2 {
     background: linear-gradient(to bottom, olivedrab, darkolivegreen);
   }
+
   .project3 {
     background: linear-gradient(to bottom left, salmon, maroon 60%);
   }
+
   .project4 {
     background: linear-gradient(to left, teal, aqua);
   }
+
   .project5 {
     background: linear-gradient(to top left, darkslateblue, mediumorchid);
   }
+
   .project6 {
     background: linear-gradient(to top, coral, burlywood);
   }
+
   .project7 {
     background: linear-gradient(to top right, darkturquoise, darkviolet);
   }
+
   .project8 {
     background: linear-gradient(to right, plum, royalblue);
   }
